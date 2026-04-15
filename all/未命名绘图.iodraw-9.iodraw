@@ -27,8 +27,8 @@
         <mxCell id="nWu9BKklhAlPFE--Lggz-12" value="车辆目标识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="420" y="50" width="80" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="nWu9BKklhAlPFE--Lggz-13" value="&#xa;&lt;li style=&quot;color: rgb(0, 0, 0); font: 16px / 24px ui-sans-serif, system-ui, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-weight: 400; line-height: 24px; text-align: start; white-space: normal; display: list-item; flex: 0 1 auto; flex-direction: row; justify-content: normal; align-items: normal; padding: 0px; margin: 0px; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box; background-color: rgba(0, 0, 0, 0);&quot;&gt;路面抛洒物检测&lt;/li&gt;&#xa;&lt;li style=&quot;color: rgb(0, 0, 0); font: 16px / 24px ui-sans-serif, system-ui, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot;, &amp;quot;Noto Color Emoji&amp;quot;; font-size: 16px; font-weight: 400; line-height: 24px; text-align: start; white-space: normal; display: list-item; flex: 0 1 auto; flex-direction: row; justify-content: normal; align-items: normal; padding: 0px; margin: 0px; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box; background-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/li&gt;&#xa;&#xa;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="390" y="110" width="80" height="50" as="geometry" />
+        <mxCell id="nWu9BKklhAlPFE--Lggz-13" value="路面抛洒物检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="110" width="90" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-14" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="470" y="150" width="80" height="50" as="geometry" />
