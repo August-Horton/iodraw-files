@@ -103,7 +103,7 @@
           <mxGeometry x="200" y="555" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-52" value="实时视频检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="310" y="480" width="80" height="50" as="geometry" />
+          <mxGeometry x="320" y="500" width="80" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-53" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="nWu9BKklhAlPFE--Lggz-51" target="nWu9BKklhAlPFE--Lggz-52">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -112,10 +112,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-54" value="车辆目标识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="410" y="500" width="80" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="nWu9BKklhAlPFE--Lggz-55" value="路面抛洒物检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="540" width="90" height="50" as="geometry" />
+          <mxGeometry x="420" y="520" width="80" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-56" value="拥堵状态识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="385" y="590" width="80" height="50" as="geometry" />
@@ -130,12 +127,6 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-59" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="nWu9BKklhAlPFE--Lggz-51" target="nWu9BKklhAlPFE--Lggz-54">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="230" y="600" as="sourcePoint" />
-            <mxPoint x="370" y="670" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nWu9BKklhAlPFE--Lggz-60" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="nWu9BKklhAlPFE--Lggz-51" target="nWu9BKklhAlPFE--Lggz-55">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="230" y="600" as="sourcePoint" />
             <mxPoint x="370" y="670" as="targetPoint" />
