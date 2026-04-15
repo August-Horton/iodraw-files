@@ -30,10 +30,10 @@
         <mxCell id="nWu9BKklhAlPFE--Lggz-13" value="路面抛洒物检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="390" y="110" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="nWu9BKklhAlPFE--Lggz-14" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nWu9BKklhAlPFE--Lggz-14" value="拥堵状态识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="470" y="150" width="80" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="nWu9BKklhAlPFE--Lggz-15" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="nWu9BKklhAlPFE--Lggz-15" value="违章行为标记" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="400" y="190" width="80" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-16" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
