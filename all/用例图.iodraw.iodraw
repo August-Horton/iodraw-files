@@ -176,18 +176,23 @@
           <mxGeometry x="900" y="145" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-14" value="设备异常识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="730" y="75" width="80" height="55" as="geometry" />
+          <mxGeometry x="710" y="85" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-15" value="线路缺陷检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="580" y="35" width="80" height="55" as="geometry" />
+          <mxGeometry x="560" y="35" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-16" value="小目标隐患识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="640" y="130" width="90" height="55" as="geometry" />
+          <mxGeometry x="530" y="100" width="90" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-17" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-15" target="5CWxQjudwtRNfryeVJQa-14">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="710" y="220" as="sourcePoint" />
             <mxPoint x="640" y="223" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-20" value="《extend》" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5CWxQjudwtRNfryeVJQa-17">
+          <mxGeometry x="-0.0031" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
