@@ -162,6 +162,54 @@
             <mxPoint x="440" y="548" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-1" value="交通巡检人员" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="155" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-2" value="实时视频检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-1" target="5CWxQjudwtRNfryeVJQa-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="340" as="sourcePoint" />
+            <mxPoint x="430" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-4" value="车辆目标识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="100" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-5" value="路面抛洒物检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="140" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-6" value="拥堵状态识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="395" y="190" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-7" value="违章行为标记" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="215" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-1" target="5CWxQjudwtRNfryeVJQa-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="200" as="sourcePoint" />
+            <mxPoint x="380" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-1" target="5CWxQjudwtRNfryeVJQa-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="200" as="sourcePoint" />
+            <mxPoint x="380" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-1" target="5CWxQjudwtRNfryeVJQa-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="200" as="sourcePoint" />
+            <mxPoint x="440" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-11" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-1" target="5CWxQjudwtRNfryeVJQa-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="200" as="sourcePoint" />
+            <mxPoint x="450" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
