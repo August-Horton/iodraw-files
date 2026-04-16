@@ -384,10 +384,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5CWxQjudwtRNfryeVJQa-77" value="模型更新升级" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="5CWxQjudwtRNfryeVJQa-77" value="系统维修修复" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="530" y="620" width="80" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="5CWxQjudwtRNfryeVJQa-78" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-77">
+        <mxCell id="5CWxQjudwtRNfryeVJQa-78" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-77" target="5CWxQjudwtRNfryeVJQa-68">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="690" y="628" as="sourcePoint" />
             <mxPoint x="720" y="645" as="targetPoint" />
@@ -398,7 +398,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5CWxQjudwtRNfryeVJQa-80" value="模型更新升级" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="5CWxQjudwtRNfryeVJQa-80" value="系统故障排查" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="550" y="562.5" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-81" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-80" target="5CWxQjudwtRNfryeVJQa-68">
