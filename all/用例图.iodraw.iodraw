@@ -294,7 +294,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-57" value="用户账号管理" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="480" y="375" width="80" height="55" as="geometry" />
+          <mxGeometry x="490" y="355" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-58" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-57" target="5CWxQjudwtRNfryeVJQa-42">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -308,7 +308,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-60" value="操作权限设置" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="550" y="430" width="80" height="55" as="geometry" />
+          <mxGeometry x="540" y="410" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-61" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-60" target="5CWxQjudwtRNfryeVJQa-42">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -334,7 +334,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-66" value="多平台部署" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="485" width="80" height="55" as="geometry" />
+          <mxGeometry x="610" y="455" width="80" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-67" value="操作权限设置" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="550" width="80" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
