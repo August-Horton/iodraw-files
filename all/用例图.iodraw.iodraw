@@ -209,6 +209,17 @@
         <mxCell id="5CWxQjudwtRNfryeVJQa-24" value="鸟巢 / 异物检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="570" y="170" width="90" height="55" as="geometry" />
         </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-25" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="680" y="182.5" as="sourcePoint" />
+            <mxPoint x="770" y="167.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-26" value="《extend》" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5CWxQjudwtRNfryeVJQa-25">
+          <mxGeometry x="-0.0547" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
