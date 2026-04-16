@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="nWu9BKklhAlPFE--Lggz-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="270" y="10" width="590" height="720" as="geometry" />
+          <mxGeometry x="270" y="20" width="590" height="710" as="geometry" />
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-1" value="交通巡检人员" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="200" y="145" width="30" height="60" as="geometry" />
@@ -425,6 +425,9 @@
           <mxGeometry x="-0.0031" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-86" value="凌云视觉无人机视觉检测系统" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="20" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
