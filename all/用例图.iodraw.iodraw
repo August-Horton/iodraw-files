@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="nWu9BKklhAlPFE--Lggz-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="270" y="10" width="590" height="700" as="geometry" />
+          <mxGeometry x="270" y="10" width="590" height="720" as="geometry" />
         </mxCell>
         <mxCell id="nWu9BKklhAlPFE--Lggz-1" value="交通巡检人员" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="200" y="145" width="30" height="60" as="geometry" />
@@ -222,7 +222,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-28" value="缺陷自动标记" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="700" y="185" width="90" height="60" as="geometry" />
+          <mxGeometry x="700" y="195" width="90" height="60" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5CWxQjudwtRNfryeVJQa-13" target="5CWxQjudwtRNfryeVJQa-28">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -337,7 +337,7 @@
           <mxGeometry x="590" y="455" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-67" value="模型更新升级" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="520" y="505" width="80" height="55" as="geometry" />
+          <mxGeometry x="530" y="505" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-68" value="系统运维与维修" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="730" y="580" width="90" height="60" as="geometry" />
