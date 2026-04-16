@@ -179,7 +179,7 @@
           <mxGeometry x="710" y="85" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-15" value="线路缺陷检测" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="35" width="80" height="55" as="geometry" />
+          <mxGeometry x="580" y="35" width="80" height="55" as="geometry" />
         </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-16" value="小目标隐患识别" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="530" y="100" width="90" height="55" as="geometry" />
@@ -193,6 +193,12 @@
         <mxCell id="5CWxQjudwtRNfryeVJQa-20" value="《extend》" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5CWxQjudwtRNfryeVJQa-17">
           <mxGeometry x="-0.0031" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-21" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="177" as="sourcePoint" />
+            <mxPoint x="620" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
