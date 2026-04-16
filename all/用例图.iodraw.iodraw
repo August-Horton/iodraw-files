@@ -167,6 +167,11 @@
             <mxPoint x="440" y="548" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="5CWxQjudwtRNfryeVJQa-19" value="《extend》" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="nWu9BKklhAlPFE--Lggz-67">
+          <mxGeometry x="0.1298" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="5CWxQjudwtRNfryeVJQa-13" value="电力巡检人员" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="900" y="145" width="30" height="60" as="geometry" />
         </mxCell>
