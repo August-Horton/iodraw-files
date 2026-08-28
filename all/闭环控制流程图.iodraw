@@ -40,10 +40,10 @@
         <mxCell id="pid" value="位置式PID数字实现（_Pid）&#xa;u(k) = Kp·e(k) + Ki·Σ e(j)·ΔT + Kd·(e(k) − e(k−1))/ΔT&#xa;积分限幅：|累加器| ≤ int_lim（深度 0.10 m / 俯仰 300 px）&#xa;零交叉清零：e(k)·e(k−1) &amp;lt; 0 时积分置零&#xa;动态死区：|e| 小于阈值时输出置零" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="60" y="1090" width="1480" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="spd" value="控制量 → 速度连续化映射&#xa;v = sat(Δθ, −θmax, +θmax) / T_measure&#xa;T_measure = 0.25 s，_cruise 以 20 ms 子步长推进关节目标位置&#xa;θmax：进给环 0.06 rad，俯仰环 0.16 rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="spd" value="控制量 → 速度连续化映射&#xa;v = sat(Δθ, −θmax, +θmax) / T_measure&#xa;T_measure = 0.25 s，_cruise 以 20 ms 子步长推进关节目标位置&#xa;θmax：进给环 0.06 rad，俯仰环 0.16 rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="60" y="1310" width="1480" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="ik" value="逆运动学&#xa;末端位姿 → 关节角指令" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="ik" value="逆运动学&#xa;末端位姿 → 关节角指令" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="60" y="1480" width="420" height="110" as="geometry" />
         </mxCell>
         <mxCell id="js" value="关节伺服&#xa;J1 基座 / J2、J3 大臂 / J4 腕部" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=16;" parent="1" vertex="1">
