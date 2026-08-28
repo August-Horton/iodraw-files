@@ -180,7 +180,7 @@
         </mxCell>
         <mxCell id="e21label" value="测量反馈" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=16;" parent="e21" vertex="1" connectable="0">
           <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-18" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#B85450;strokeWidth=2;exitX=1;exitY=0.5;fontSize=16;exitDx=0;exitDy=0;" parent="1" source="fb" edge="1">
