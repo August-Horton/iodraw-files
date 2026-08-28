@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ioDraw.com/3.4.1 Chrome/124.0.6367.49 Electron/30.0.0 Safari/537.36" version="24.7.17">
   <diagram id="closed-loop-control" name="闭环控制流程图">
-    <mxGraphModel dx="727" dy="433" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="2100" math="0" shadow="0">
+    <mxGraphModel dx="1845" dy="1098" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="2100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -88,7 +88,7 @@
             <mxPoint x="-19" y="2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.2;" parent="1" edge="1">
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.999;exitY=0.275;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="l1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="520" y="888.5" as="sourcePoint" />
             <mxPoint x="630" y="720" as="targetPoint" />
@@ -96,13 +96,12 @@
               <mxPoint x="530" y="889" />
               <mxPoint x="530" y="800" />
               <mxPoint x="630" y="800" />
-              <mxPoint x="630" y="719" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e7label" value="迭代：小步快走" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e7" vertex="1" connectable="0">
           <mxGeometry x="-0.4" y="-2" relative="1" as="geometry">
-            <mxPoint x="58" y="-7" as="offset" />
+            <mxPoint x="48" y="-30" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="d1" target="par" edge="1">
