@@ -37,7 +37,7 @@
         <mxCell id="l3" value="第三级：俯仰锁定环（pid_cy）&#xa;反馈：垂直像素误差 ecy&#xa;Kp = 0.9，Ki = 0.08，Kd = 0.25&#xa;积分限幅 300 px，死区 ±15 px&#xa;J4 腕部俯仰，阻尼高频抖动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="1080" y="840" width="460" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="pid" value="位置式PID数字实现（_Pid）&#xa;u(k) = Kp·e(k) + Ki·Σ e(j)·ΔT + Kd·(e(k) − e(k−1))/ΔT&#xa;积分限幅：|累加器| ≤ int_lim（深度 0.10 m / 俯仰 300 px）&#xa;零交叉清零：e(k)·e(k−1) &amp;lt; 0 时积分置零&#xa;动态死区：|e| 小于阈值时输出置零" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=18;" parent="1" vertex="1">
+        <mxCell id="pid" value="位置式PID数字实现（_Pid）&#xa;u(k) = Kp·e(k) + Ki·Σ e(j)·ΔT + Kd·(e(k) − e(k−1))/ΔT&#xa;积分限幅：|累加器| ≤ int_lim（深度 0.10 m / 俯仰 300 px）&#xa;零交叉清零：e(k)·e(k−1) &amp;lt; 0 时积分置零&#xa;动态死区：|e| 小于阈值时输出置零" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=19;" parent="1" vertex="1">
           <mxGeometry x="60" y="1090" width="1480" height="170" as="geometry" />
         </mxCell>
         <mxCell id="spd" value="控制量 → 速度连续化映射&#xa;v = sat(Δθ, −θmax, +θmax) / T_measure&#xa;T_measure = 0.25 s，_cruise 以 20 ms 子步长推进关节目标位置&#xa;θmax：进给环 0.06 rad，俯仰环 0.16 rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=18;" parent="1" vertex="1">
@@ -183,10 +183,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#B85450;strokeWidth=2;exitX=0.5;exitY=0;fontSize=16;" parent="1" source="fb" edge="1">
+        <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#B85450;strokeWidth=2;exitX=1;exitY=0.5;fontSize=16;exitDx=0;exitDy=0;" parent="1" source="fb" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1640" y="1670" />
+              <mxPoint x="1640" y="1755" />
               <mxPoint x="1640" y="380" />
               <mxPoint x="730" y="380" />
               <mxPoint x="730" y="460" />
