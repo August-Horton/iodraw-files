@@ -26,7 +26,7 @@
           <mxGeometry x="280" y="600" width="440" height="170" as="geometry" />
         </mxCell>
         <mxCell id="par" value="二级 / 三级&#xa;并行投入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="900" y="610" width="240" height="60" as="geometry" />
+          <mxGeometry x="1010" y="610" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="l1" value="第一级：方位引导环（J1）&#xa;输入：水平像素误差 ex&#xa;比例主导 + 死区 + 步长限幅 ±0.10 rad&#xa;Δθ = ex 按 FOV 线性映射，小步快走&#xa;连续迭代直至 |ex| ≤ 180 px" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="60" y="840" width="440" height="180" as="geometry" />
@@ -99,13 +99,18 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e7label" value="迭代：小步快走" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=15;" parent="e7" vertex="1" connectable="0">
+        <mxCell id="e7label" value="迭代：小步快走" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=13;" parent="e7" vertex="1" connectable="0">
           <mxGeometry x="-0.4" y="-2" relative="1" as="geometry">
             <mxPoint x="48" y="-30" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=16;" parent="1" source="d1" target="par" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="685" />
+              <mxPoint x="910" y="640" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e8label" value="是（进入中心区）" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=16;" parent="e8" vertex="1" connectable="0">
           <mxGeometry x="-0.3" y="-2" relative="1" as="geometry">
