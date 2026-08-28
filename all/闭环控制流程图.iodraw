@@ -52,10 +52,10 @@
         <mxCell id="rob" value="机械臂与末端执行器&#xa;相机光轴随动，目标保持画面中心" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="1020" y="1480" width="560" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="d2" value="收敛判定？&#xa;|ez| ≤ 0.02 m 且 |ecy| ≤ 15 px&#xa;且 |ex| ≤ 180 px" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="d2" value="收敛判定？&#xa;|ez| ≤ 0.02 m 且 |ecy| ≤ 15 px&#xa;且 |ex| ≤ 180 px" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="300" y="1660" width="560" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="grab" value="末端到位，进入抓取流程&#xa;三维定位 CEP 优于 ±5 mm，抓取成功率 ≥ 95%" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="grab" value="末端到位，进入抓取流程&#xa;三维定位 CEP 优于 ±5 mm，抓取成功率 ≥ 95%" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="200" y="1910" width="760" height="100" as="geometry" />
         </mxCell>
         <mxCell id="fb" value="传感器反馈&#xa;关节编码器 / 力-力矩&#xa;相机像素 (ex, ecy)&#xa;深度传感器 zm" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=18;" parent="1" vertex="1">
