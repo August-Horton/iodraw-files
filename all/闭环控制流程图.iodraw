@@ -13,7 +13,7 @@
         <mxCell id="img" value="图像采集&#xa;相机 RGB 图像" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="300" y="150" width="400" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="det" value="目标检测（目标检测位姿）&#xa;输出：目标框中心 (cx, cy)&#xa;置信度 conf、深度 zm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="det" value="目标检测（目标检测位姿）&#xa;输出：目标框中心 (cx, cy)&#xa;置信度 conf、深度 zm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="300" y="270" width="400" height="110" as="geometry" />
         </mxCell>
         <mxCell id="ref" value="控制参考&#xa;期望末端位姿（目标检测位姿）&#xa;z_target = 0.35 m&#xa;画面中心 (cx0, cy0)" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=18;" parent="1" vertex="1">
@@ -190,7 +190,6 @@
               <mxPoint x="1640" y="380" />
               <mxPoint x="730" y="380" />
               <mxPoint x="730" y="460" />
-              <mxPoint x="700" y="460" />
             </Array>
             <mxPoint x="700" y="460" as="targetPoint" />
           </mxGeometry>
