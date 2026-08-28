@@ -154,13 +154,16 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#B85450;strokeWidth=2;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" parent="1" source="fb" target="err" edge="1">
+        <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#B85450;strokeWidth=2;exitX=0.5;exitY=0;" parent="1" source="fb" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1640" y="1670" />
               <mxPoint x="1640" y="380" />
-              <mxPoint x="700" y="380" />
+              <mxPoint x="730" y="380" />
+              <mxPoint x="730" y="460" />
+              <mxPoint x="700" y="460" />
             </Array>
+            <mxPoint x="700" y="460" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e22label" value="闭环反馈：视觉 / 深度 / 编码器" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#B85450;" parent="e22" vertex="1" connectable="0">
