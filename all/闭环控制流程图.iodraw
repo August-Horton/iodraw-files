@@ -1,197 +1,133 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ioDraw.com/3.4.1 Chrome/124.0.6367.49 Electron/30.0.0 Safari/537.36" version="24.7.17">
   <diagram id="closed-loop-control" name="闭环控制流程图">
-    <mxGraphModel dx="1199" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="2100" math="0" shadow="0">
+    <mxGraphModel dx="1199" dy="714" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1560" pageHeight="1400" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="start" value="开始&#xa;视觉系统启动" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="330" y="40" width="340" height="70" as="geometry" />
+        <mxCell id="title" value="图7  三级级联视觉伺服闭环控制流程图" style="text;html=1;align=center;verticalAlign=middle;fontSize=19;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="10" width="480" height="28" as="geometry" />
         </mxCell>
-        <mxCell id="img" value="图像采集&#xa;相机 RGB 图像" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="300" y="150" width="400" height="80" as="geometry" />
+        <mxCell id="start" value="视觉伺服启动" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=13;" parent="1" vertex="1">
+          <mxGeometry x="660" y="48" width="180" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="det" value="目标检测（目标检测位姿）&#xa;输出：目标框中心 (cx, cy)&#xa;置信度 conf、深度 zm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="300" y="270" width="400" height="110" as="geometry" />
+        <mxCell id="det" value="目标检测&#xa;中心、置信度、深度" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="640" y="120" width="300" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ref" value="控制参考&#xa;期望末端位姿（目标检测位姿）&#xa;z_target = 0.35 m&#xa;画面中心 (cx0, cy0)" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="760" y="420" width="380" height="120" as="geometry" />
+        <mxCell id="err" value="误差计算&#xa;ex、ecy、ez" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="640" y="240" width="300" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="err" value="误差计算&#xa;ex = cx − cx0&#xa;ecy = cy − cy0&#xa;ez = zm − 0.35 m" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="300" y="420" width="400" height="120" as="geometry" />
+        <mxCell id="d1" value="进入中心可信区？&#xa;|ex| ≤ 180 px 且 conf ≥ 0.30" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="620" y="380" width="340" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="d1" value="目标进入中心可信区？&#xa;判定：|ex| ≤ 180 px&#xa;且 conf ≥ 0.30" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="280" y="600" width="440" height="170" as="geometry" />
+        <mxCell id="l1" value="第一级 方位引导 J1&#xa;死区 + 步长限幅 ±0.10 rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="60" y="570" width="300" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="par" value="二级 / 三级&#xa;并行投入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="1010" y="610" width="240" height="60" as="geometry" />
+        <mxCell id="l2" value="第二级 深度趋近 pid_z&#xa;Kp=1.0，Ki=0.15，Kd=0.05" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="400" y="570" width="340" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="l1" value="第一级：方位引导环（J1）&#xa;输入：水平像素误差 ex&#xa;比例主导 + 死区 + 步长限幅 ±0.10 rad&#xa;Δθ = ex 按 FOV 线性映射，小步快走&#xa;连续迭代直至 |ex| ≤ 180 px" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="60" y="840" width="440" height="180" as="geometry" />
+        <mxCell id="l3" value="第三级 俯仰锁定 pid_cy&#xa;Kp=0.9，Ki=0.08，Kd=0.25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="780" y="570" width="340" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="l2" value="第二级：进给趋近环（pid_z）&#xa;反馈：深度 zm vs z_target = 0.35 m&#xa;Kp = 1.0，Ki = 0.15，Kd = 0.05&#xa;积分限幅 0.10 m，死区 ±0.02 m&#xa;J2/J3 一正一负同步进退" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="560" y="840" width="460" height="180" as="geometry" />
+        <mxCell id="ctrl" value="位置式PID + 速度连续化映射&#xa;u(k) = Kp·e(k) + Ki·Σ e(j)·ΔT + Kd·(e(k) − e(k−1))/ΔT&#xa;积分限幅 · 零交叉清零 · 动态死区&#xa;v = sat(Δθ)/T_measure（T=0.25 s，子步长 20 ms）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="60" y="750" width="1060" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="l3" value="第三级：俯仰锁定环（pid_cy）&#xa;反馈：垂直像素误差 ecy&#xa;Kp = 0.9，Ki = 0.08，Kd = 0.25&#xa;积分限幅 300 px，死区 ±15 px&#xa;J4 腕部俯仰，阻尼高频抖动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="1080" y="840" width="460" height="180" as="geometry" />
+        <mxCell id="exec" value="逆运动学 → 关节伺服（J1/J2/J3/J4）→ 机械臂 / 相机光轴&#xa;目标保持画面中心" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="60" y="950" width="1060" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="pid" value="位置式PID数字实现（_Pid）&#xa;u(k) = Kp·e(k) + Ki·Σ e(j)·ΔT + Kd·(e(k) − e(k−1))/ΔT&#xa;积分限幅：|累加器| ≤ int_lim（深度 0.10 m / 俯仰 300 px）&#xa;零交叉清零：e(k)·e(k−1) &amp;lt; 0 时积分置零&#xa;动态死区：|e| 小于阈值时输出置零" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="60" y="1090" width="1480" height="170" as="geometry" />
+        <mxCell id="d2" value="收敛判定&#xa;|ez| ≤ 0.02 m 且 |ecy| ≤ 15 px 且 |ex| ≤ 180 px" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1130" width="520" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="spd" value="控制量 → 速度连续化映射&#xa;v = sat(Δθ, −θmax, +θmax) / T_measure&#xa;T_measure = 0.25 s，_cruise 以 20 ms 子步长推进关节目标位置&#xa;θmax：进给环 0.06 rad，俯仰环 0.16 rad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="60" y="1310" width="1480" height="120" as="geometry" />
+        <mxCell id="grab" value="进入抓取（成功率 ≥ 95%）" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="200" y="1340" width="620" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ik" value="逆运动学&#xa;末端位姿 → 关节角指令" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="60" y="1480" width="420" height="110" as="geometry" />
+        <mxCell id="fb" value="传感器反馈&#xa;图像 / 深度 / 编码器 · 力矩" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1180" y="1130" width="300" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="js" value="关节伺服&#xa;J1 基座 / J2、J3 大臂 / J4 腕部" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="540" y="1480" width="420" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="rob" value="机械臂与末端执行器&#xa;相机光轴随动，目标保持画面中心" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="1020" y="1480" width="560" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="d2" value="收敛判定？&#xa;|ez| ≤ 0.02 m 且 |ecy| ≤ 15 px&#xa;且 |ex| ≤ 180 px" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="300" y="1660" width="560" height="190" as="geometry" />
-        </mxCell>
-        <mxCell id="grab" value="末端到位，进入抓取流程&#xa;三维定位 CEP 优于 ±5 mm，抓取成功率 ≥ 95%" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="200" y="1910" width="760" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="fb" value="传感器反馈&#xa;关节编码器 / 力-力矩&#xa;相机像素 (ex, ecy)&#xa;深度传感器 zm" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=20;" parent="1" vertex="1">
-          <mxGeometry x="1180" y="1670" width="360" height="170" as="geometry" />
-        </mxCell>
-        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="start" target="img" edge="1">
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="start" target="det" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="img" target="det" edge="1">
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="det" target="err" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="det" target="err" edge="1">
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="err" target="d1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;fontSize=16;" parent="1" source="ref" target="err" edge="1">
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.2;exitY=1;entryX=0.5;entryY=0;" parent="1" source="d1" target="l1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="err" target="d1" edge="1">
+        <mxCell id="e4label" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e4" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.7;" parent="1" source="l1" target="d1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;fontSize=16;" parent="1" source="d1" target="l1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="280" y="770" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e6label" value="否（未进入可信区）" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=16;" parent="e6" vertex="1" connectable="0">
-          <mxGeometry x="-0.3" y="-2" relative="1" as="geometry">
-            <mxPoint x="-19" y="2" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.999;exitY=0.275;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=16;" parent="1" source="l1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="520" y="888.5" as="sourcePoint" />
-            <mxPoint x="630" y="720" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="530" y="889" />
-              <mxPoint x="530" y="800" />
-              <mxPoint x="630" y="800" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e7label" value="迭代：小步快走" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=14;" parent="e7" vertex="1" connectable="0">
-          <mxGeometry x="-0.4" y="-2" relative="1" as="geometry">
-            <mxPoint x="48" y="-30" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=16;" parent="1" source="d1" target="par" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="910" y="685" />
-              <mxPoint x="910" y="640" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e8label" value="是（进入中心区）" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=16;" parent="e8" vertex="1" connectable="0">
+        <mxCell id="e5label" value="迭代" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e5" vertex="1" connectable="0">
           <mxGeometry x="-0.3" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=16;" parent="1" source="par" target="l2" edge="1">
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" parent="1" source="d1" target="l2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;fontSize=16;" parent="1" source="par" target="l3" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.2;entryY=0;fontSize=16;" parent="1" source="l1" target="pid" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;fontSize=16;" parent="1" source="l2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="790" y="1090" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="790" y="1090" />
-            </Array>
+        <mxCell id="e6label" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e6" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;fontSize=16;" parent="1" source="l3" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1310" y="1090" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1310" y="1090" />
-            </Array>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.8;entryX=0.5;entryY=0;" parent="1" source="d1" target="l3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.2;entryY=0;" parent="1" source="l1" target="ctrl" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="l2" target="ctrl" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.8;entryY=0;" parent="1" source="l3" target="ctrl" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="ctrl" target="exec" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="exec" target="d2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" parent="1" source="d2" target="grab" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13label" value="是" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e13" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=16;" parent="1" source="pid" target="spd" edge="1">
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.2;" parent="1" source="exec" target="fb" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;fontSize=16;" parent="1" source="spd" target="ik" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="ik" target="js" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;" parent="1" source="js" target="rob" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=16;" parent="1" source="rob" target="d2" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=16;" parent="1" source="d2" target="grab" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e19label" value="是（误差达标）" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=16;" parent="e19" vertex="1" connectable="0">
+        <mxCell id="e14label" value="测量反馈" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e14" vertex="1" connectable="0">
           <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=16;" parent="1" source="d2" target="fb" edge="1">
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.6;" parent="1" source="d2" target="fb" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e20label" value="否（继续伺服）" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=16;" parent="e20" vertex="1" connectable="0">
+        <mxCell id="e15label" value="否（继续伺服）" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e15" vertex="1" connectable="0">
           <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.8;exitY=1;entryX=0.5;entryY=0;fontSize=16;" parent="1" source="rob" target="fb" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e21label" value="测量反馈" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=16;" parent="e21" vertex="1" connectable="0">
-          <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
-            <mxPoint x="-18" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#B85450;strokeWidth=2;exitX=1;exitY=0.5;fontSize=16;exitDx=0;exitDy=0;" parent="1" source="fb" edge="1">
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#B85450;strokeWidth=2;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" parent="1" source="fb" target="err" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1640" y="1755" />
-              <mxPoint x="1640" y="380" />
-              <mxPoint x="730" y="380" />
-              <mxPoint x="730" y="460" />
+              <mxPoint x="1500" y="1130" />
+              <mxPoint x="1500" y="285" />
+              <mxPoint x="940" y="285" />
             </Array>
-            <mxPoint x="700" y="460" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e22label" value="闭环反馈：视觉 / 深度 / 编码器" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=16;fontColor=#B85450;" parent="e22" vertex="1" connectable="0">
+        <mxCell id="e16label" value="闭环反馈：图像 / 深度 / 编码器" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#B85450;" parent="e16" vertex="1" connectable="0">
           <mxGeometry x="-0.1" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
