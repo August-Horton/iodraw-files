@@ -79,15 +79,13 @@
         <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitDx=0;exitDy=0;" parent="1" source="d1" target="l1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="410" y="770" />
-              <mxPoint x="410" y="805" />
-              <mxPoint x="280" y="805" />
+              <mxPoint x="280" y="770" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e6label" value="否（未进入可信区）" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e6" vertex="1" connectable="0">
           <mxGeometry x="-0.3" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-19" y="2" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.2;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="1" source="l1" target="d1" edge="1">
@@ -97,7 +95,7 @@
         </mxCell>
         <mxCell id="e7label" value="迭代：小步快走" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=11;" parent="e7" vertex="1" connectable="0">
           <mxGeometry x="-0.4" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-8" y="-58" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="d1" target="par" edge="1">
