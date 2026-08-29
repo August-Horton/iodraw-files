@@ -1,34 +1,34 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ioDraw.com/3.4.1 Chrome/124.0.6367.49 Electron/30.0.0 Safari/537.36" version="24.7.17">
   <diagram id="urdf-control-debug-compact" name="URDF控制调试流程-紧凑版">
-    <mxGraphModel dx="1599" dy="952" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1600" math="0" shadow="0">
+    <mxGraphModel dx="2664" dy="1587" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1600" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="start" value="开始调试&#xa;URDF 控制部分" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="start" value="开始调试&#xa;URDF 控制部分" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="190" y="145" width="300" height="70" as="geometry" />
         </mxCell>
         <mxCell id="s1" value="阶段一 · 结构验证&#xa;URDF 合法性 / 拓扑完整性&#xa;· xacro 展开校验（xmllint / ros2 run xacro）&#xa;· check_urdf 模型完整性（joint/link/limit/inertial）&#xa;· urdf_to_graphiz 关节树与坐标系核对" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="690" y="95" width="520" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="d1" value="结构验证&#xa;通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="d1" value="结构验证&#xa;通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="1400" y="130" width="320" height="100" as="geometry" />
         </mxCell>
         <mxCell id="s2" value="阶段二 · 关节控制参数配置&#xa;控制接口 / 传动映射一致性&#xa;· 关节类型 ↔ ros2_control 命令接口匹配&#xa;· limit 限幅与 effort 余量（留 3%~5%）&#xa;· transmission 减速比校验&#xa;· controller_joint 清单逐字核对" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="1300" y="415" width="520" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="d2" value="参数配置&#xa;通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="d2" value="参数配置&#xa;通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="790" y="450" width="320" height="100" as="geometry" />
         </mxCell>
         <mxCell id="s3" value="阶段三 · 运动学与动力学模型验证&#xa;物理可信度&#xa;· 正逆运动学闭环验证（FK/IK 收敛）&#xa;· mass / 质心 origin 与 CAD 总量核对&#xa;· 惯性矩阵正定性与三角不等式&#xa;· 小惯量关节补充 dynamics.damping" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="80" y="415" width="520" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="d3" value="动力学验证&#xa;通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="d3" value="动力学验证&#xa;通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="180" y="770" width="320" height="100" as="geometry" />
         </mxCell>
         <mxCell id="s4" value="阶段四 · 仿真环境下的控制逻辑测试&#xa;Gazebo 隔离硬件不确定性&#xa;· 加载 URDF 并显式激活控制器&#xa;· 单关节独立驱动方向 / 限位 / 反馈&#xa;· 复合轨迹规划（FK 偏差 ≤ 2 cm）&#xa;· 响应时间测量与 update_rate 调整" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="690" y="735" width="520" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="d4" value="控制逻辑&#xa;通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="d4" value="控制逻辑&#xa;通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="1400" y="770" width="320" height="100" as="geometry" />
         </mxCell>
         <mxCell id="s5" value="阶段五 · 仿真调试常见问题与闭环修复&#xa;依据现象反查上游根因&#xa;· 卡顿 / 比例偏差 / 振荡 / 发散 / 塌陷&#xa;· 依据故障表溯源阶段并修复&#xa;· 修复后回退至对应阶段重测" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=13;" parent="1" vertex="1">
@@ -37,10 +37,10 @@
         <mxCell id="acc" value="验收标准&#xa;关节稳态误差 ≤ ±0.01 rad&#xa;重复定位 ≤ 0.5° / 末端 ≤ 1 mm&#xa;小行程响应 ≤ 0.2 s / 满行程 ≤ 0.5 s&#xa;循环周期抖动 ≤ ±5%（250 Hz ≤ 4 ms）&#xa;轨迹跟踪 RMSE ≤ 1.5 cm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="690" y="1055" width="520" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="dAcc" value="验收&#xa;达标？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="dAcc" value="验收&#xa;达标？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="180" y="1190" width="320" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="end" value="具备向实物迁移条件&#xa;调试完成" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=14;" parent="1" vertex="1">
+        <mxCell id="end" value="具备向实物迁移条件&#xa;调试完成" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=13;" parent="1" vertex="1">
           <mxGeometry x="190" y="1365" width="300" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fix" value="闭环溯源修复&#xa;按现象回退对应阶段：&#xa;· 卡顿 → 阶段二/四&#xa;· 比例偏差 → 阶段二&#xa;· 振荡 → 阶段四&#xa;· 发散 → 阶段三&#xa;· CPU 100% → 阶段一&#xa;· 塌陷 → 阶段二/四" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=13;" parent="1" vertex="1">
