@@ -4,9 +4,6 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="URDF 控制部分调试工作流程图" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="300" y="8" width="500" height="36" as="geometry" />
-        </mxCell>
         <mxCell id="principle" value="递进原则&#xa;从结构到参数 · 从单元到集成 · 从开环到闭环&#xa;上一步未通过验证，不进入下一步" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="840" y="8" width="330" height="62" as="geometry" />
         </mxCell>
