@@ -38,13 +38,13 @@
           <mxGeometry x="690" y="1055" width="520" height="170" as="geometry" />
         </mxCell>
         <mxCell id="dAcc" value="验收&#xa;达标？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="180" y="1160" width="320" height="100" as="geometry" />
+          <mxGeometry x="180" y="1190" width="320" height="100" as="geometry" />
         </mxCell>
         <mxCell id="end" value="具备向实物迁移条件&#xa;调试完成" style="ellipse;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="190" y="1365" width="300" height="70" as="geometry" />
         </mxCell>
         <mxCell id="fix" value="闭环溯源修复&#xa;按现象回退对应阶段：&#xa;· 卡顿 → 阶段二/四&#xa;· 比例偏差 → 阶段二&#xa;· 振荡 → 阶段四&#xa;· 发散 → 阶段三&#xa;· CPU 100% → 阶段一&#xa;· 塌陷 → 阶段二/四" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=13;" parent="1" vertex="1">
-          <mxGeometry x="790" y="1280" width="320" height="240" as="geometry" />
+          <mxGeometry x="1080" y="1280" width="320" height="240" as="geometry" />
         </mxCell>
         <mxCell id="e_start_s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="start" target="s1" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -162,14 +162,14 @@
         <mxCell id="e_dAcc_fix" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="dAcc" target="fix" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="630" y="1210" />
+              <mxPoint x="630" y="1240" />
               <mxPoint x="630" y="1400" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e_dAcc_fixlabel" value="否：闭环溯源" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#B85450;" parent="e_dAcc_fix" vertex="1" connectable="0">
           <mxGeometry x="-0.2" y="-2" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-16" y="-82" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e_fix_d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#9673A6;strokeWidth=2;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" parent="1" source="fix" target="d1" edge="1">
